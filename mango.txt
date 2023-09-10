@@ -1,3 +1,0 @@
-This is a mongoDb file 
-Crud operation in mongo mongoDb
-how to insert data in collections
