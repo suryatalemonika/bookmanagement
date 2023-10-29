@@ -1,11 +1,21 @@
 const dbConnect = require('./mongo.js');
-
-const getData = async ()=>{
+const { ObjectId } = require('mongodb');
+const getData = async () => {
     let data = await dbConnect.mongoDbConnection();
     data = await data.find({}).toArray()
-    return data 
+    return data
+}
+
+const GetdatabyId = async (id) => {
+    let data = await dbConnect.mongoDbConnection();
+    const searchCriteria = { "_id": new ObjectId(id) };
+    data = await data.find(searchCriteria).toArray()
+    return data
 }
 
 module.exports = {
-    getData
+    getData,
+    GetdatabyId
 }
+
+

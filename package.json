@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./index.js"
+    "test": "node ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url":"git+https://github.com/suryatalemonika/bookmanagement.git"
   },
   "author": "",
   "license": "ISC",
