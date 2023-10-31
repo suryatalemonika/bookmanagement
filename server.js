@@ -21,10 +21,10 @@ app.get('/search/:_id', async function (req, res) {
 })
 
 app.post('/add', async (req, res) => {
-    let result = insertData(req.body)
-    console.log(`------------------------------------added books in database ----------------------------------`)
+    let result = await insertData(req.body)
+    console.log(`------------------------------------added books in database ----------------------------------`);
     console.log(result);
-    res.send(await result);
+    res.send(result);
 })
 
 app.put('/update', async (req, res) => {
@@ -41,6 +41,6 @@ app.delete('/delete', async (req, res) => {
     res.send(result)
 })
 
-app.listen('5005', () => {
+app.listen('5000', () => {
     console.log('app is running on port 5000 ');
 })
